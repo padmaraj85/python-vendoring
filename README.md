@@ -30,8 +30,7 @@ docker container exec -it compose_tyk_build_1 /root/plugin/build.sh
 
 ### Download the zip file
 
-- In this repo, as an example auth.zip bundle will be created. You may change it by modifying the contents of build.sh
-- Change the .json and .py files according to your needs.
+- In this repo, as an example, **auth.zip** bundle will be created by default. You may change it by modifying the contents of **./plugin/build.sh**  and change the **.json** and **.py** files under plugin according to your needs.
 
 - bundle will be created inside /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
 
