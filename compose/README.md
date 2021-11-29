@@ -3,7 +3,7 @@
 
 ### Listing the libraries to be bundled.
 
-- requirements.txt file contains the library to be bundled. Update it according to your needs.
+- **requirements.txt** -- file contains the library to be bundled. Update it according to your needs.
 
 ### Create the containers
 ```bash
@@ -12,7 +12,7 @@ docker-compose up -d
 ```
 
 This creates:
-- compose_tyk_build_1 to build the bundles and serve them to compose_tyk_gateway_1
+- compose_tyk_build_1 to build the bundles
 
 
 ### Update compose_tyk_build_1 to have the tools needed
