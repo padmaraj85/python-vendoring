@@ -1,9 +1,9 @@
-# python-vendoring
-Vendoring libraries for Tyk python plugin
-# Python plugin development notes
-
 
 ## Steps to setup the enviornment.
+
+### Listing the libraries to be bundled.
+
+- requirements.txt file contains the library to be bundled. Update it according to your needs.
 
 ### Create the containers
 ```bash
@@ -12,8 +12,7 @@ docker-compose up -d
 ```
 
 This creates:
-
-- compose_tyk_build_1 to build the bundles
+- compose_tyk_build_1 to build the bundles and serve them to compose_tyk_gateway_1
 
 
 ### Update compose_tyk_build_1 to have the tools needed
@@ -28,13 +27,11 @@ docker container exec compose_tyk_build_1 /root/plugin/mkvendor.sh
 docker container exec -it compose_tyk_build_1 /root/plugin/build.sh
 ```
 
+### Download the zip file
 
-### Copy the bundle.zip to local directory
+- In this repo, as an example auth.zip bundle will be created. You may change it by modifying the contents of build.sh
+- Change the .json and .py files according to your needs.
 
-- You may change build.sh file according to you plugin (.json and py file)
+- bundle will be created insdie /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
 
-- In this example we create two bunldes auth.zip and register.zip
-
--- bundle will be created insdie /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
-
-docker cp compose_tyk_build_1:/root/plugin/bundle.zip ~/<your folder>
+docker cp compose_tyk_build_1:/root/plugin/auth.zip ~/<your-local-folder>
