@@ -1,4 +1,5 @@
-
+This repo helps in creating the vendored bundle for Python plugin.
+ 
 ## Steps to setup the enviornment.
 
 ### Listing the libraries to be bundled.
@@ -32,7 +33,7 @@ docker container exec -it compose_tyk_build_1 /root/plugin/build.sh
 - In this repo, as an example auth.zip bundle will be created. You may change it by modifying the contents of build.sh
 - Change the .json and .py files according to your needs.
 
-- bundle will be created insdie /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
+- bundle will be created inside /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
 
 ```
 docker cp compose_tyk_build_1:/root/plugin/auth.zip ~/<your-local-folder>
