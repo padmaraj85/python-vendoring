@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker container rm compose_tyk_build_1

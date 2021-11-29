@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:4.0-alpine
+    expose:
+      - "6379"
+  tyk_build:
+    image: tykio/tyk-gateway:v3.2.1
+    volumes:
+      - ./tyk.standalone.conf:/opt/tyk-gateway/tyk.conf
+      - ./plugin:/root/plugin
+    logging:
+          driver: none
