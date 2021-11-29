@@ -34,4 +34,6 @@ docker container exec -it compose_tyk_build_1 /root/plugin/build.sh
 
 - bundle will be created insdie /root/plugin folder of compose_tyk_build_1 container. User below command to copy it to you local machine.
 
+```
 docker cp compose_tyk_build_1:/root/plugin/auth.zip ~/<your-local-folder>
+```
