@@ -1,9 +1,7 @@
-# Python plugin development notes
-
 
 ## Steps to setup the enviornment.
 
-## Listing the libraries to be bundled.
+### Listing the libraries to be bundled.
 
 - requirements.txt file contains the library to be bundled. Update it according to your needs.
 
