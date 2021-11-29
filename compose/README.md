@@ -5,7 +5,7 @@
 
 ## Listing the libraries to be bundled.
 
-- update the content of requirements.txt 
+- requirements.txt file contains the library to be bundled. Update it according to your needs.
 
 ### Create the containers
 ```bash
